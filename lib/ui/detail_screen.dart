@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:marvel_catalog/domain/view_models/marvel_view_model.dart';
 import 'package:marvel_catalog/ui/widgets/card_list_element.dart';
+import 'package:marvel_catalog/utils/app_copies.dart';
 import 'package:marvel_catalog/utils/marvel_utils.dart';
 import 'package:provider/provider.dart';
 
@@ -37,15 +38,15 @@ class _DetailScreenState extends State<DetailScreen> {
             elementList: selectedMarvelInfo?.charactersOrComics ?? [],
           ),
           CardListElement(
-            title: 'Series',
+            title: AppCopies.seriesLabel,
             elementList: selectedMarvelInfo?.seriesList ?? [],
           ),
           CardListElement(
-            title: 'Stories',
+            title: AppCopies.storiesLabel,
             elementList: selectedMarvelInfo?.storiesList ?? [],
           ),
           CardListElement(
-            title: 'Events',
+            title: AppCopies.eventsLabel,
             elementList: selectedMarvelInfo?.eventsList ?? [],
           ),
           CardListElement(
