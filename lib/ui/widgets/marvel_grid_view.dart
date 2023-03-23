@@ -37,12 +37,14 @@ class MarvelGridView extends StatelessWidget {
             const SliverToBoxAdapter(
               child: SizedBox(height: 80),
             ),
-            SliverToBoxAdapter(
-              child: ElevatedButton(
-                onPressed: onTap,
-                child: const Text('Load more'),
+            if (marvelViewModel.totalElements ==
+                marvelViewModel.marvelInfoList.length)
+              SliverToBoxAdapter(
+                child: ElevatedButton(
+                  onPressed: onTap,
+                  child: const Text('Load more'),
+                ),
               ),
-            ),
           ],
         ),
       ),
